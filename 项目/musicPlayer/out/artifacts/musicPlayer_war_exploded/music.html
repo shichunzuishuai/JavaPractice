@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>心随乐动音乐播放器</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script type="text/javascript"></script>
+    <style>
+        #body{
+            background-image: url("images/6.png");
+            background-size:100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <script>
+        //登录请求
+        $(function () {
+            $("#submit5").click(function () {
+                window.location.href="/onLineMusic/login.html";
+            });
+        });
+    </script>
+
+</head>
+<body id="body">
+<div class="container" style="width: 400px;margin-top: 110px;background-color: rgba(255,255,255,0.8)">
+    <h3 style="text-align: center;">欢迎来到心随乐动</h3>
+
+    <hr/>
+    <div class="form-group" style="text-align: center;"><!--class="form-group"-->
+        <input style="width: 200px;height: 40px" id="submit5" class="btn btn btn-primary" type="button" value="点击进行登录或注册" >
+    </div>
+</div>
+</body>
+</html>
