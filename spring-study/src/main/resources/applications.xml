@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                          https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 通过bean标签定义bean对象,Spring Bean 容器是通过id 来进行管理的, id相当于bean
+       的名字,Spring 可以通过国id找到Bean对象
+       默认是单例模式的-->
+    <!--通过无参的构造方法,创建一个对象,如果该类型没有无参的构造方法,就会报错 -->
+    <bean id="bit" class="java.lang.String">
+        <!-- 下面的是给一个参数       -->
+        <constructor-arg value="龙世春"></constructor-arg>
+    </bean>
+    <!--    <bean class="java.lang.String"></bean>-->
+    <bean id="d1_1" class="chun.Duck">
+        <property name="name" value="s1"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="d1_2" class="chun.Duck">
+        <property name="name" value="s2"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="d1_3" class="chun.Duck">
+        <property name="name" value="s3"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="shop" class="chun.DuckShop">
+       <property name="ducks">
+           <list >
+               <ref bean="d1_1"/>
+               <ref bean="d1_2"/>
+               <ref bean="d1_3"/>
+           </list>
+       </property>
+    </bean>
+
+
+
+
+    <bean id="s1" class="java.lang.String">
+        <constructor-arg value="LadyGaga"/>
+    </bean>
+
+    <bean id="d2" class="chun.Duck2">
+        <constructor-arg name="n" value="烤鸭" />
+        <constructor-arg name="a" value="2"/>
+    </bean>
+
+    <bean id="d31" class="chun.Duck3">
+        <property name="name" value="南京烤鸭"/>
+        <property name="age" value="2"/>
+        <property name="next" ref="d32"/>
+    </bean>
+
+    <bean id="d32" class="chun.Duck3">
+        <property name="name" value="甜皮鸭" />
+        <property name="age" value="1"/>
+        <property name="next" ref="d33"/>
+    </bean>
+
+    <bean id="d33" class="chun.Duck3">
+        <property name="name" value="酱鸭"/>
+        <property name="age" value="3"/>
+    </bean>
+
+
+
+
+</beans>
