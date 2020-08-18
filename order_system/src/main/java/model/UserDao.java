@@ -29,7 +29,7 @@ public class UserDao {
             int ret = ps.executeUpdate();
             if(ret != 1){
                 throw new OrderSystemException("插入用户失败");
-            }
+             }
             System.out.println("插入用户成功");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class UserDao {
             DBUtil.close(connection,ps,null);
         }
     }
-
+    //按照姓名查找用户,注册的时候判断是否已经被注册过了
     public User selectByName(String name) throws OrderSystemException {
         Connection connection = null;
         PreparedStatement ps = null;

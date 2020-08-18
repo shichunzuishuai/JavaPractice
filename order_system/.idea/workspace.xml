@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="order_system:jar" />
@@ -65,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/order_system_jar/order_system.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../musicPlayer" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,43 +80,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="Deploy to Host.Deploy to Host">
-    <configuration name="Deploy to Host" type="DEPLOY_HOST_RUN_CONFIGURATION" factoryName="Deploy to Host">
-      <option name="accountModel" />
-      <option name="accountModels" />
-      <option name="address" />
-      <option name="afterCommand" value="" />
-      <option name="alreadyReset" value="true" />
-      <option name="autoOpen" value="false" />
-      <option name="beforeCommand" value="" />
-      <option name="defaultTabIdx" value="0" />
-      <option name="ecsInstance">
-        <EcsInstance>
-          <option name="OSType" />
-          <option name="instanceId" />
-          <option name="instanceName" />
-          <option name="netType" />
-          <option name="privateIps" />
-          <option name="publicIps" />
-          <option name="regionId" />
-          <option name="tags" />
-        </EcsInstance>
-      </option>
-      <option name="ecsInstances" />
-      <option name="hostIds">
-        <list>
-          <option value="3" />
-        </list>
-      </option>
-      <option name="hostTagId" value="0" />
-      <option name="location" value="/root/project/order_system" />
-      <option name="pathOrUrl" value="D:\JavaPractice\项目\order_system\out\artifacts\order_system_jar\order_system.jar" />
-      <option name="tagId" value="0" />
-      <option name="terminalCommand" />
-      <option name="type" value="HOST" />
-      <option name="uploadType" value="FILE" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Deploy to Host.order-system">
     <configuration name="db_tst" type="DEPLOY_HOST_RUN_CONFIGURATION" factoryName="Deploy to Host">
       <option name="accountModel" />
       <option name="accountModels" />
@@ -150,6 +117,82 @@
       <option name="uploadType" value="FILE" />
       <method v="2" />
     </configuration>
+    <configuration name="order-system" type="DEPLOY_HOST_RUN_CONFIGURATION" factoryName="Deploy to Host">
+      <option name="accountModel" />
+      <option name="accountModels" />
+      <option name="address" />
+      <option name="afterCommand" value="" />
+      <option name="alreadyReset" value="true" />
+      <option name="autoOpen" value="false" />
+      <option name="beforeCommand" value="" />
+      <option name="defaultTabIdx" value="0" />
+      <option name="ecsInstance">
+        <EcsInstance>
+          <option name="OSType" />
+          <option name="instanceId" />
+          <option name="instanceName" />
+          <option name="netType" />
+          <option name="privateIps" />
+          <option name="publicIps" />
+          <option name="regionId" />
+          <option name="tags" />
+        </EcsInstance>
+      </option>
+      <option name="ecsInstances" />
+      <option name="hostIds">
+        <list>
+          <option value="3" />
+        </list>
+      </option>
+      <option name="hostTagId" value="0" />
+      <option name="location" value="/root/java16/apache-tomcat-8.5.57/webapps " />
+      <option name="pathOrUrl" value="D:\JavaPractice\项目\order_system\target\order_system.war" />
+      <option name="tagId" value="0" />
+      <option name="terminalCommand" />
+      <option name="type" value="HOST" />
+      <option name="uploadType" value="MAVEN" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/../order_system\pom.xml" goal="clean install" />
+      </method>
+    </configuration>
+    <configuration name="order_system" type="DEPLOY_HOST_RUN_CONFIGURATION" factoryName="Deploy to Host">
+      <option name="accountModel" />
+      <option name="accountModels" />
+      <option name="address" />
+      <option name="afterCommand" value="" />
+      <option name="alreadyReset" value="true" />
+      <option name="autoOpen" value="false" />
+      <option name="beforeCommand" value="" />
+      <option name="defaultTabIdx" value="0" />
+      <option name="ecsInstance">
+        <EcsInstance>
+          <option name="OSType" />
+          <option name="instanceId" />
+          <option name="instanceName" />
+          <option name="netType" />
+          <option name="privateIps" />
+          <option name="publicIps" />
+          <option name="regionId" />
+          <option name="tags" />
+        </EcsInstance>
+      </option>
+      <option name="ecsInstances" />
+      <option name="hostIds">
+        <list>
+          <option value="3" />
+        </list>
+      </option>
+      <option name="hostTagId" value="0" />
+      <option name="location" value="/root/java16/apache-tomcat-8.5.57/webapps" />
+      <option name="pathOrUrl" value="D:\JavaPractice\项目\order_system\target\order_system.war" />
+      <option name="tagId" value="0" />
+      <option name="terminalCommand" />
+      <option name="type" value="HOST" />
+      <option name="uploadType" value="MAVEN" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/../order_system\pom.xml" goal="clean install" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -177,6 +220,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597626846399</updated>
       <workItem from="1597626851605" duration="19973000" />
+      <workItem from="1597704887107" duration="22776000" />
     </task>
     <servers />
   </component>
@@ -184,10 +228,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="97" key="#Deploy_to_Host" timestamp="1597654609722">
+    <state x="488" y="97" key="#Deploy_to_Host" timestamp="1597741804653">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="488" y="97" key="#Deploy_to_Host/0.0.1536.864@0.0.1536.864" timestamp="1597654609722" />
+    <state x="488" y="97" key="#Deploy_to_Host/0.0.1536.864@0.0.1536.864" timestamp="1597741804653" />
     <state x="361" y="91" key="#Inspections" timestamp="1597628018452">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -204,26 +248,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="214" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1597649063700" />
-    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1597653289703">
+    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1597737127123">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1597653289703" />
-    <state width="1493" height="263" key="GridCell.Tab.0.bottom" timestamp="1597654646463">
+    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1597737127123" />
+    <state width="1493" height="263" key="GridCell.Tab.0.bottom" timestamp="1597761510704">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597654646463" />
-    <state width="1493" height="263" key="GridCell.Tab.0.center" timestamp="1597654646463">
+    <state width="1493" height="263" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597761510704" />
+    <state width="1493" height="263" key="GridCell.Tab.0.center" timestamp="1597761510703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597654646463" />
-    <state width="1493" height="263" key="GridCell.Tab.0.left" timestamp="1597654646463">
+    <state width="1493" height="263" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597761510703" />
+    <state width="1493" height="263" key="GridCell.Tab.0.left" timestamp="1597761510703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597654646463" />
-    <state width="1493" height="263" key="GridCell.Tab.0.right" timestamp="1597654646463">
+    <state width="1493" height="263" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597761510703" />
+    <state width="1493" height="263" key="GridCell.Tab.0.right" timestamp="1597761510703">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597654646463" />
+    <state width="1493" height="263" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597761510703" />
     <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1597631913159">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -232,9 +276,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="249" y="7" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1597654135820" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1597655270971">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1597740161990">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1597655270971" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1597740161990" />
   </component>
 </project>

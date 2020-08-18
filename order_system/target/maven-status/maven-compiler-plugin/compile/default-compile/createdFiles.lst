@@ -1,7 +1,15 @@
-model\UserDao.class
 util\OrderSystemException.class
 model\DishDao.class
+model\OrderDao.class
+servlet\loginServlet$Request.class
 model\Dish.class
-model\DBUtil.class
+servlet\loginServlet$Response.class
 model\Order.class
+model\UserDao.class
+servlet\loginServlet.class
+util\OrderSystemUtil.class
+servlet\RegisterServlet.class
+servlet\RegisterServlet$Request.class
+model\DBUtil.class
 model\User.class
+servlet\RegisterServlet$Response.class
