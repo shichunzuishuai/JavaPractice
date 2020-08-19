@@ -64,9 +64,9 @@ public class OrderDao {
         Connection connection = null;
         PreparedStatement ps = null;
         try {
+            connection = DBUtil.getConnection();
             //关闭自动提交
             connection.setAutoCommit(false);
-            connection = DBUtil.getConnection();
             String sql = "insert into order_dish values (?,?)";
             ps = connection.prepareStatement(sql);
             //遍历dishes 给sql添加多个values的值
@@ -80,20 +80,20 @@ public class OrderDao {
             ps.executeBatch(); //把刚才的sql进行统一执行
             //发行给服务器(真的执行)
             connection.commit();
-             System.out.println("插入订单成功");
+            System.out.println("插入订单成功");
         } catch (SQLException e) {
             e.printStackTrace();
             //如果上面的操作出现异常,就认为整体新增订单的操作失败,就回滚之前的order_user表的内容
             deleteOrderUser(order.getOrderId());
-
-            throw new OrderSystemException("插入订单失败");
         }finally {
             DBUtil.close(connection,ps,null);
         }
     }
 
+
+
     //这个方法用于删除order_user表中的记录
-    private void deleteOrderUser(int orderId) throws OrderSystemException {
+    public void deleteOrderUser(int orderId) throws OrderSystemException {
         Connection connection = null;
         PreparedStatement ps = null;
         try {
@@ -114,6 +114,8 @@ public class OrderDao {
         }
     }
 
+
+
     //查看所有订单
     //Order对象里,orderId,userId可以直接通过order_user来获取
     //订单中还有一个List<Dish>,都有哪些菜品
@@ -121,7 +123,7 @@ public class OrderDao {
     //仔细思考,发现这里的订单获取不需要那么详细的信息,只要获取到订单的基本信息就行了
     //菜品信息,上面定义的时候有一个专门的类来做这件事
     //所以这个接口不包含菜品信息
-    private List<Order> selectAll() throws OrderSystemException {
+    public List<Order> selectAll() throws OrderSystemException {
         List<Order> list = new ArrayList<>();
         Connection connection = null;
         PreparedStatement ps = null;
@@ -135,7 +137,7 @@ public class OrderDao {
                 //此时order中没有dishes字段
                 Order order = new Order();
                 order.setOrderId(rs.getInt("orderId"));
-                order.setOrderId(rs.getInt("userId"));
+                order.setUserId(rs.getInt("userId"));
                 order.setTime(rs.getTimestamp("time"));
                 order.setIsDone(rs.getInt("isDone"));
                 list.add(order);
@@ -164,7 +166,7 @@ public class OrderDao {
                 //此时order中没有dishes字段
                 Order order = new Order();
                 order.setOrderId(rs.getInt("orderId"));
-                order.setOrderId(rs.getInt("userId"));
+                order.setUserId(rs.getInt("userId"));
                 order.setTime(rs.getTimestamp("time"));
                 order.setIsDone(rs.getInt("isDone"));
                 list.add(order);
@@ -191,37 +193,36 @@ public class OrderDao {
     }
 
 
-
-    //根据orderId来查询对应的Order对象的基本信息
-    //查找order_user表
     private Order builderOrder(int orderId) {
-        Connection connection = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
+        // 1. 获取到数据库连接
+        Connection connection = DBUtil.getConnection();
+        // 2. 拼装 SQL
+        String sql = "select * from order_user where orderId = ?";
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         try {
-            connection = DBUtil.getConnection();
-            String sql = "select * from orser_user where orderId = ?";
-            ps = connection.prepareStatement(sql);
-            ps.setInt(1,orderId);
-            rs = ps.executeQuery();
-            if (rs.next()){
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1, orderId);
+            // 3. 执行 SQL
+            resultSet = statement.executeQuery();
+            // 4. 遍历结果集合
+            if (resultSet.next()) {
                 Order order = new Order();
-                order.setOrderId(rs.getInt("orderId"));
-                order.setUserId(rs.getInt("userId"));
-                order.setTime(rs.getTimestamp("time"));
-                order.setIsDone(rs.getInt("isDone"));
+                order.setOrderId(resultSet.getInt("orderId"));
+                order.setUserId(resultSet.getInt("userId"));
+                order.setTime(resultSet.getTimestamp("time"));
+                order.setIsDone(resultSet.getInt("isDone"));
                 return order;
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            DBUtil.close(connection,ps,rs);
+        } finally {
+            DBUtil.close(connection, statement, resultSet);
         }
         return null;
     }
 
-    //
+
     private List<Integer> selectDishIds(int orderId) {
         List<Integer> dishIds = new ArrayList<>();
         Connection connection = null;
@@ -234,7 +235,7 @@ public class OrderDao {
             ps.setInt(1, orderId);
             rs = ps.executeQuery();
             while (rs.next()) {
-               dishIds.add(rs.getInt("dishId"));
+                dishIds.add(rs.getInt("dishId"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -244,6 +245,8 @@ public class OrderDao {
         return dishIds;
 
     }
+
+
 
     //返回一个完整的Order对象
     private Order getDishDetail(Order order, List<Integer> dishIds) throws OrderSystemException {
@@ -278,6 +281,11 @@ public class OrderDao {
         } finally {
           DBUtil.close(connection,ps,null);
         }
+    }
+
+    public static void main(String[] args) {
+
+
     }
 
 }

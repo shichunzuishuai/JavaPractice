@@ -33,3 +33,12 @@ create table order_dish(
     foreign key (dishId) references dishes(dishId)
 );
 
+insert into user values (null,'123',1,'admin');
+
+insert into dishes values (null,'红烧茄子',1200);
+insert into dishes values (null,'烧花鸭',1200);
+insert into dishes values (null,'酱肘子',1200);
+
+
+DELETE FROM order_user WHERE orderId IN (21,22,23,24,25,26,27,28,29,30,31,32,33);
+delete from order_dish where dishId = 7;
