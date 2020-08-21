@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f18273aa-2306-4bf0-b92e-5a4368ac8dba" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eRquCOTwidT7VFvHijHauLV3TT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StructursePractice" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TestMysql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestMysql" />
+      <module name="java_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestMysql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f18273aa-2306-4bf0-b92e-5a4368ac8dba" name="默认更改列表" comment="" />
+      <created>1594294973279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594294973279</updated>
+      <workItem from="1594294986891" duration="3455000" />
+      <workItem from="1594364532174" duration="5301000" />
+      <workItem from="1594428960403" duration="5194000" />
+      <workItem from="1594459675151" duration="63000" />
+      <workItem from="1594471991343" duration="2900000" />
+      <workItem from="1594516117033" duration="1201000" />
+      <workItem from="1594543089977" duration="11815000" />
+      <workItem from="1594603645461" duration="601000" />
+      <workItem from="1594623162902" duration="7897000" />
+      <workItem from="1594689573994" duration="5515000" />
+      <workItem from="1594908418994" duration="329000" />
+      <workItem from="1594946341025" duration="332000" />
+      <workItem from="1594946938512" duration="856000" />
+      <workItem from="1594950395161" duration="666000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1594473449421">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594473449421" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594553059024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594553059024" />
+    <state x="361" y="71" key="#范围" timestamp="1594368571922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#范围/0.0.1536.824@0.0.1536.824" timestamp="1594368571922" />
+    <state x="361" y="71" key="#项目结构" timestamp="1594950753449">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#项目结构/0.0.1536.824@0.0.1536.824" timestamp="1594950753449" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1594951060346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594951060346" />
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1594951061365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594951061365" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1594951061365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594951061365" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1594951061365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594951061365" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1594951061365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594951061365" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1594368626243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594368626243" />
+    <state x="178" y="23" key="new project wizard" timestamp="1594706910631">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1594706910631" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1594563696312">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594563696312" />
+  </component>
+</project>

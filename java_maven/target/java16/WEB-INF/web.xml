@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1"
+         metadata-complete="true">
+
+  <servlet>
+    <servlet-name>java16_hello</servlet-name>
+    <servlet-class>HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>java16_hello</servlet-name>
+    <url-pattern>/java16-hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CalcServlet</servlet-name>
+    <servlet-class>CalcServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalcServlet</servlet-name>
+    <url-pattern>/CalcServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo01</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo01</servlet-name>
+    <url-pattern>/ServletDemo01</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ServletDemo02</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo02</servlet-name>
+    <url-pattern>/ServletDemo02</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo03</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo03</servlet-name>
+    <url-pattern>/ServletDemo03</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo04</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo04</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo04</servlet-name>
+    <url-pattern>/ServletDemo04</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo05</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo05</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo05</servlet-name>
+    <url-pattern>/ServletDemo05</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  <servlet-name>ServletDemo06</servlet-name>
+  <servlet-class>java_servlet07_12.ServletDemo06</servlet-class>
+</servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo06</servlet-name>
+    <url-pattern>/ServletDemo06</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo07</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo07</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo07</servlet-name>
+    <url-pattern>/ServletDemo07</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo08</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo08</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo08</servlet-name>
+    <url-pattern>/ServletDemo08</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo09</servlet-name>
+    <servlet-class>java_servlet07_12.ServletDemo09</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo09</servlet-name>
+    <url-pattern>/ServletDemo09</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo10</servlet-name>
+    <servlet-class>java_servlet07_13.ServletDemo10</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo10</servlet-name>
+    <url-pattern>/uploadServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+</web-app>
