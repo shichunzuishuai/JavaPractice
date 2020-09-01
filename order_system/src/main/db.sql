@@ -4,7 +4,7 @@ use order_system;
 drop table if exists dishes;
 create table dishes(
     dishId int primary key auto_increment,
-    name varchar(20),
+    name varchar(50) unique,
     price int  -- 以分为单位,使用int来表示,不要用double 或float,会存在误差
 );
 
@@ -28,12 +28,13 @@ create table order_user(
 drop table if exists order_dish;
 create table order_dish(
     orderId int,
+    dishName varchar(50),
+    dishPrice int,
     dishId int,
-    foreign key (orderId) references order_user(orderId),
-    foreign key (dishId) references dishes(dishId)
+    foreign key (orderId) references order_user(orderId)
 );
 
-insert into user values (null,'123',1,'admin');
+insert into user values (null,'admin','123',1);
 
 insert into dishes values (null,'红烧茄子',1200);
 insert into dishes values (null,'烧花鸭',1200);
@@ -42,3 +43,6 @@ insert into dishes values (null,'酱肘子',1200);
 
 DELETE FROM order_user WHERE orderId IN (21,22,23,24,25,26,27,28,29,30,31,32,33);
 delete from order_dish where dishId = 7;
+
+show table status from order_system where name='dishes';
+show table status from order_system where name='order_dish';

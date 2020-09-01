@@ -133,9 +133,9 @@ public class DishDao {
 //            System.out.println(d);
 //        }
         //测试查询指定菜品
-//        Dish dish = dishDao.selectById(2);
-//        System.out.println(dish);
+        Dish dish = dishDao.selectById(2);
+        System.out.println(dish);
         //测试删除菜品
-        dishDao.delete(2);
+      //  dishDao.delete(2);
     }
 }

@@ -20,11 +20,11 @@ public class UserDao {
             //1.先建立连接
             connection = DBUtil.getConnection();
             //2.拼装sql语句
-            String sql = "insert into user values (null ,?,?,?)";
+            String sql = "insert into user values (null ,?,?,0)";
             ps = connection.prepareStatement(sql);
-            ps.setString(1,user.getPassword());
-            ps.setInt(2,user.getIsAdmin());
-            ps.setString(3,user.getName());
+            //ps.setInt(2,user.getIsAdmin());
+            ps.setString(1,user.getName());
+            ps.setString(2,user.getPassword());
             //执行sql语句
             int ret = ps.executeUpdate();
             if(ret != 1){

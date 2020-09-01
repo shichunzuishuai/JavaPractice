@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -20,10 +20,11 @@
                     <v-icon>mdi-login</v-icon>
                 </v-list-item-action>
                 <v-list-item-content>
-                    <v-list-item-title>登陆</v-list-item-title>
+                    <v-list-item-title>登录</v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
         </v-list>
+
 
         <v-list dense v-show="login.isLogin">
             <v-list-item link>
@@ -72,7 +73,7 @@
                     <thead>
                     <tr>
                         <th class="text-left">菜名</th>
-                        <th class="text-left">价格</th>
+                        <th class="text-left">价格(元)</th>
                         <th class="text-left">操作</th>
                     </tr>
                     </thead>
@@ -82,7 +83,7 @@
                             <v-icon>mdi-food</v-icon> {{ dish.name }}
                         </td>
                         <td>
-                            <v-icon>mdi-cash</v-icon> {{ dish.price }}
+                            <v-icon>mdi-cash</v-icon> {{ dish.price / 100}}
                         </td>
                         <td>
                             <v-btn color="primary" v-on:click="deleteDish(dish.dishId)">删除</v-btn>
@@ -174,16 +175,16 @@
                             <thead>
                             <tr>
                                 <th class="text-left">菜品</th>
-                                <th class="text-left">价格</th>
+                                <th class="text-left">价格(元)</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr v-for="dish in curOrder.dishes">
                                 <td>{{dish.name}}</td>
-                                <td>{{dish.price}}</td>
+                                <td>{{dish.price / 100}}</td>
                             </tr>
                             <tr>
-                                <td>总金额: {{curOrderPrice()}}</td>
+                                <td>总金额: {{curOrderPrice() / 100}} 元</td>
                                 <td>
                                     <v-btn color="primary" v-on:click="showCurOrder = false">关闭</v-btn>
                                 </td>
@@ -208,7 +209,7 @@
                                 </v-row>
                                 <v-row>
                                     <v-col cols="12" sm="12">
-                                        <v-text-field label="价格(元)*" v-model="newDish.price" required>
+                                        <v-text-field label="价格(分)*" v-model="newDish.price" required>
                                         </v-text-field>
                                     </v-col>
                                 </v-row>

@@ -60,35 +60,39 @@ public class OrderDao {
         }
     }
 
+
     private void addOrderDish(Order order) throws OrderSystemException {
-        Connection connection = null;
-        PreparedStatement ps = null;
-        try {
-            connection = DBUtil.getConnection();
-            //关闭自动提交
-            connection.setAutoCommit(false);
-            String sql = "insert into order_dish values (?,?)";
-            ps = connection.prepareStatement(sql);
-            //遍历dishes 给sql添加多个values的值
-            List<Dish> dishes = order.getDishes();
-            for (Dish dish: dishes) {
-                ps.setInt(1,order.getOrderId());
-                ps.setInt(2,dish.getDishId());
-                ps.addBatch();//给sql新增一片段
-            }
-            //执行sql(并不是真的执行),commit可以执行多个sql,一次调用commit统一发给服务器
-            ps.executeBatch(); //把刚才的sql进行统一执行
-            //发行给服务器(真的执行)
-            connection.commit();
-            System.out.println("插入订单成功");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            //如果上面的操作出现异常,就认为整体新增订单的操作失败,就回滚之前的order_user表的内容
-            deleteOrderUser(order.getOrderId());
-        }finally {
-            DBUtil.close(connection,ps,null);
-        }
-    }
+           Connection connection = null;
+           PreparedStatement ps = null;
+           try {
+               connection = DBUtil.getConnection();
+               //关闭自动提交
+               connection.setAutoCommit(false);
+               String sql = "insert into order_dish values (?,?,?,?)";
+               ps = connection.prepareStatement(sql);
+               //遍历dishes 给sql添加多个values的值
+               List<Dish> dishes = order.getDishes();
+               for (Dish dish: dishes) {
+                   ps.setInt(1,order.getOrderId());
+                   ps.setString(2,dish.getName());
+                   ps.setInt(3,dish.getPrice());
+                   ps.setInt(4,dish.getDishId());
+                   ps.addBatch();//给sql新增一片段
+               }
+               //执行sql(并不是真的执行),commit可以执行多个sql,一次调用commit统一发给服务器
+               ps.executeBatch(); //把刚才的sql进行统一执行
+               //发行给服务器(真的执行)
+               connection.commit();
+               System.out.println("插入订单成功");
+           } catch (SQLException e) {
+               e.printStackTrace();
+               //如果上面的操作出现异常,就认为整体新增订单的操作失败,就回滚之前的order_user表的内容
+               deleteOrderUser(order.getOrderId());
+           }finally {
+               DBUtil.close(connection,ps,null);
+           }
+       }
+
 
 
 
@@ -250,8 +254,8 @@ public class OrderDao {
 
     //返回一个完整的Order对象
     private Order getDishDetail(Order order, List<Integer> dishIds) throws OrderSystemException {
-       List<Dish> dishes = new ArrayList<>();
-       DishDao dishDao = new DishDao();
+        List<Dish> dishes = new ArrayList<>();
+        DishDao dishDao = new DishDao();
         for (Integer dishId : dishIds) {
             Dish dish = dishDao.selectById(dishId);
             dishes.add(dish);
@@ -279,7 +283,7 @@ public class OrderDao {
             e.printStackTrace();
             throw new OrderSystemException("修改订单状态失败");
         } finally {
-          DBUtil.close(connection,ps,null);
+            DBUtil.close(connection,ps,null);
         }
     }
 

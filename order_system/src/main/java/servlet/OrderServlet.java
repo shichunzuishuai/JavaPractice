@@ -24,7 +24,7 @@ public class OrderServlet extends HttpServlet {
     private Gson gson = new GsonBuilder().create();
 
     //这个类是订单相关操作的
-    //整个类所有需要的api,只有新智订单需要body,
+    //整个类所有需要的api,只有新增订单需要body,
     //新增body也是一个数组,所以不用创建专门的类来表示请求的body了
     static class Response {
         private int ok;

@@ -28,7 +28,7 @@ public class RegisterServlet extends HttpServlet {
         public int ok;
         public String reason;
     }
-
+    //注册
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Response response = new Response();

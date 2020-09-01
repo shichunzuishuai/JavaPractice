@@ -17,6 +17,7 @@ public class DBUtil {
 
     private static volatile DataSource dataSource = null;
 
+    //数据库
     public static DataSource getDataSource(){
         if (dataSource == null) {
             synchronized (DBUtil.class) {

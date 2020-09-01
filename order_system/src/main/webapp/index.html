@@ -95,7 +95,7 @@
                             <v-icon>mdi-food</v-icon> {{ dish.name }}
                         </td>
                         <td>
-                            <v-icon>mdi-cash</v-icon> {{ dish.price }}
+                            <v-icon>mdi-cash</v-icon> {{ dish.price / 100}}
                         </td>
                         <td>
                             <v-switch v-model="dish.isSelected"></v-switch>
@@ -106,7 +106,7 @@
             </v-simple-table>
             <v-row v-show="status == 'dishesPage' && login.isLogin">
                 <v-col :col="11">
-                    <div class="pa-2">已点 {{selectedDishCount}} 道菜, 总计 {{selectedDishPrice}} 元</div>
+                    <div class="pa-2">已点 {{selectedDishCount}} 道菜, 总计 {{selectedDishPrice / 100}} 元</div>
                 </v-col>
                 <v-col :cols="2">
                     <v-btn color="primary" block v-on:click="postOrder()">下单</v-btn>
@@ -225,10 +225,10 @@
                             <tbody>
                             <tr v-for="dish in curOrder.dishes">
                                 <td>{{dish.name}}</td>
-                                <td>{{dish.price}}</td>
+                                <td>{{dish.price / 100}}</td>
                             </tr>
                             <tr>
-                                <td>总金额: {{curOrderPrice()}}</td>
+                                <td>总金额: {{curOrderPrice() / 100}}</td>
                                 <td>
                                     <v-btn color="primary" v-on:click="showCurOrder = false">关闭</v-btn>
                                 </td>
