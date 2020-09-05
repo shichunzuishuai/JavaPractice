@@ -27,13 +27,11 @@ public class RegisterServlet extends HttpServlet {
         String gender = req.getParameter("gender");
         String email = req.getParameter("email");
 
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println(age);
-        System.out.println(gender);
-        System.out.println(email);
-
-
+//        System.out.println(username);
+//        System.out.println(password);
+//        System.out.println(age);
+//        System.out.println(gender);
+//        System.out.println(email);
 
         User registerUser = new User();
         registerUser.setUsername(username);

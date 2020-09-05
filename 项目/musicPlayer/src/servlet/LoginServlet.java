@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
         if(user != null){
             System.out.println("登陆成功");
             //将该用户写到session中
-            req.getSession().setAttribute("user",user);
+            req.getSession().setAttribute("user",user); 
             return_map.put("msg",true);
         }else {
             System.out.println("登录失败");

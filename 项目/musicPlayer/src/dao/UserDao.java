@@ -70,7 +70,7 @@ public class UserDao {
     }
 
     //判断该用户是否已经注册过了
-    public static boolean exit(String name){
+    public  boolean exit(String name){
         Connection connection = null;
         PreparedStatement ps = null;
         User user = null;
@@ -82,7 +82,7 @@ public class UserDao {
             ps.setString(1,name);
             rs = ps.executeQuery();
             int ret = 0;
-            while (rs.next()){
+            if (rs.next()){
                  ret = rs.getInt(1);
                  System.out.println(ret);
             }
@@ -113,8 +113,8 @@ public class UserDao {
 //        int registerUser = register(user);
 //        System.out.println(registerUser);
 
-        boolean flag = exit("bit");
-        System.out.println(flag);
+//        boolean flag = exit("bit");
+//        System.out.println(flag);
 
     }
 }
