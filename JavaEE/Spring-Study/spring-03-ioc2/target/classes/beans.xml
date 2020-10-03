@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    使用spring来创建对象,都称为bean-->
+<!--    无参构造-->
+<!--    <bean id="s1" class="User">-->
+<!--        <property name="name" value="龙世春"/>-->
+<!--    </bean>-->
+<!--    有参构造-->
+    <bean id="s1" class="User">
+        <constructor-arg name="name" value="龙世春"/>
+    </bean>
+    <bean id ="userT" class="UserT">
+
+    </bean>
+<!--    alias是给一个bean起别名-->
+    <alias name="s1" alias="user"/>
+</beans>
