@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="textView">请输入账号</string>
+    <string name="button">登录</string>
+    <string name="textview03">1.0.0.1</string>
+    <string name="textView02">请输入密码</string>
+    <string name="imageview">imageView</string>
+</resources>
